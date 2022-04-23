@@ -3,26 +3,41 @@ padding: 0%;
 margin: 0%;
 }
 
+html, body {
+  height: 100%;
+}
+
 body{
     position: relative;
-    background-color: #c3002f;
-    height: 100%;
+    background-color: #fff;
     display:flex;
     flex-direction:column;
-    background:url(../assets/imgg/fondo.jpg);   
+    /*background:url(../assets/imgg/fondo.jpg);   */
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
     background-attachment:fixed;
 }
 
-
-
 header{
   width: 100%;
-  background-color: #f8def3;
+  background-color:#fff;
+  /*background-color: #f8def3;*/
   /* background-image: linear-gradient(#f8def3, white); */
   
+}
+
+.publicidad {
+	height: 300px;
+}
+.publicidad > img{
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  flex: 1 0 auto;
 }
 
 .wrapper{
@@ -31,28 +46,52 @@ header{
 }
 
 .italica {
+	margin-top: 20px;
     font-family: Arial, Helvetica, sans-serif; 
-    color: #c3002f;
+    /*color: #c3002f;*/
+    color: black;
     font-size: 50px;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 5px #ccc;
 }
 
 .subtitulo {
-    font-size: 40px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #c3002f;
+    color: black;
+    font-style: italic;
+    /*color: #c3002f;*/
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-delay: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
+@keyframes aparecer {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
 h3{
     line-height: 80px;
 
 }
 .navegacion{
-    width: 900px;
+	width:100%;
     margin: 30px auto;
     
 }
 .navegacion ul{
     list-style: none;
 }
+.menu{
+	background-color:#ffcad4;
+}
+
 .menu > li{
     position: relative;
     display: inline-block;
@@ -60,30 +99,54 @@ h3{
 .menu > li a{
     display: block;
     padding: 15px 20px;
-    font-family: 'PT Sans', sans-serif;
+    /*font-family: 'PT Sans', sans-serif;*/
     text-decoration:none;
-    background-color: rgb(245, 195, 237);
+    /*background-color: rgb(245, 195, 237)*/;
 }
 
-html { height: 100%; }
+/* unvisited link */
+.menu li a:link{
+    color:black;
+    transition: all .3s;
+}
 
-.content {
+.menu li a:visited {
+    color:black;
+    transition: all .3s;
+}
+
+.menu li a:hover{
+    color:#c3002f;
+    transition: all .3s;
+}
+/*.content {
   flex: 1;
   padding: 0px;
-}
+}*/ 
+/*patricio, lo saco a la ostia*/
+
 .footer {
-	position: absolute;
-	
-	background: #000000;
-	color: white;
+	/*position: absolute;*/
+	text-align: center; 
+	flex-shrink: 0;
+	color: black;
 	margin: 0%;
 	padding: 3px;
-	height: 150px;
+	height: 170px;
 	width: 100%;
-	background-color: black;  
+	background-color: #f7f7f7;  
 }
+
+.footer .pie{
+	margin-top: 10px;
+}
+.footer .detalle{
+	margin-top: 10px;
+	color: #6d6d6d;
+}
+
 .mail{
-  color: #fff;
+  color: #6d6d6d;
   text-decoration: none;
 }
 * {
@@ -100,6 +163,9 @@ html { height: 100%; }
 .foto-imagenes img {
   height: 250px;
   width: 350px;
+  transform: scale(1.0);
+  transition: transform 0.4s ease;
+  /* transform: rotate(50deg); */
 }
 
 .img-box {
@@ -119,6 +185,7 @@ html { height: 100%; }
   bottom: 5px;
   left: 20px;
   opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .transparent-box {
@@ -128,10 +195,20 @@ html { height: 100%; }
   position:absolute ;
   top: 0;
   left: 0;
+  transition: background-color 0.3s ease;
+}
+
+.img-box:hover img { 
+  transform: scale(1.1);
 }
 
 .img-box:hover .transparent-box {
   background-color:rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
 }
 
 .img-box:hover {
@@ -194,14 +271,16 @@ input:focus{
   border: 2px dotted #ff0000;
   color: green;
 }
-
+input{
+  transition: all 2s;
+}
 /* laptop */
 @media only screen and (max-width:1024px){
 body{
   margin: 0px;
   padding: 0px;
 }
-  .header{
+.header{
   padding: 0px;
   width: 100%;
 
@@ -211,7 +290,7 @@ body{
 /* estilo para tablet  */
  @media only screen and (min-width:501px) and (max-width:899px) { 
   
-  .menu > li {
+.menu > li {
   display:block;
   justify-content: center;
   padding: 0px 0x;        
