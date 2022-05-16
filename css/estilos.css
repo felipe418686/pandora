@@ -1,6 +1,4 @@
 @charset "UTF-8";
-/*Variables*/
-/*colores*/
 /*funtes*/
 * {
   padding: 0%;
@@ -23,7 +21,7 @@ body {
   background-attachment: fixed;
 }
 
-header {
+.header {
   width: 100%;
   background-color: #fff;
   /*background-color: #f8def3;*/
@@ -47,7 +45,6 @@ header {
   font-size: 50px;
   text-transform: uppercase;
   text-shadow: 5px 5px 5px #ccc;
-  text-align: center;
 }
 
 .subtitulo {
@@ -111,18 +108,6 @@ h3 {
   transition: all 0.3s;
 }
 
-.footer {
-  /*position: absolute;*/
-  text-align: center;
-  flex-shrink: 0;
-  color: black;
-  margin: 0%;
-  padding: 3px;
-  height: 170px;
-  width: 100%;
-  background-color: #fff;
-}
-
 /* carousel */
 .carousel-inner img {
   width: 90%;
@@ -130,11 +115,6 @@ h3 {
   display: block;
   margin: auto;
   object-fit: cover;
-}
-
-.footer .pie {
-  padding: 5px;
-  margin-top: 10px;
 }
 
 .text-muted {
@@ -161,10 +141,10 @@ h3 {
 }
 
 .img-box {
-  box-sizing: content-box;
-  margin: 10px;
   height: 250px;
   width: 350px;
+  margin: 10px;
+  box-sizing: content-box;
   overflow: hidden;
   display: inline-block;
   color: white;
@@ -224,10 +204,6 @@ h3 {
   height: 30px;
 }
 
-.barra {
-  text-align: end;
-}
-
 /* termina la pagina de incio */
 /* comienza contactos */
 form {
@@ -265,7 +241,7 @@ textarea {
   cursor: pointer;
 }
 
-.center {
+.center, .italica {
   text-align: center;
 }
 
@@ -336,11 +312,6 @@ input {
     padding: 0px;
   }
 
-  .footer {
-    margin: 0px;
-    padding: 0px;
-  }
-
   .navegacion {
     width: 100%;
     margin: 10px auto;
@@ -348,6 +319,10 @@ input {
 
   form {
     width: 320px;
+  }
+
+  .justify-content-end {
+    justify-content: center;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 600px) {
