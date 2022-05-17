@@ -121,6 +121,24 @@ h3 {
   color: #6d6d6d !important;
 }
 
+.fab {
+  font-size: 20px;
+  color: #6d6d6d;
+  margin: 2px;
+}
+
+.fa-brands {
+  font-size: 25px;
+  color: #6d6d6d;
+  margin: 2px;
+}
+
+.fa-solid {
+  color: #6d6d6d;
+  font-size: 25px;
+  margin: 2px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -322,7 +340,7 @@ input {
   }
 
   .justify-content-end {
-    justify-content: center;
+    justify-content: center !important;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 600px) {

@@ -119,6 +119,24 @@ color4:#6d6d6d,
     .text-muted{
       color:map-get($map: $paletacolores, $key:color4 ) !important;
     }
+    //facebook icono
+    .fab{
+      font-size: 20px;
+      color: map-get($map: $paletacolores, $key:color4 );
+      margin: 2px;
+    }
+    //instragram icono
+    .fa-brands{
+      font-size: 25px;
+      color: map-get($map: $paletacolores, $key:color4 );
+      margin: 2px;
+    }
+    //Email icono
+    .fa-solid{
+      color: map-get($map: $paletacolores, $key:color4 );
+      font-size: 25px;
+      margin: 2px;
+    } 
     * {
       box-sizing: border-box;
     }
@@ -202,7 +220,6 @@ color4:#6d6d6d,
       width: 30px;
       height: 30px;
     }
-    
     
     /* termina la pagina de incio */
     /* comienza contactos */
@@ -311,7 +328,7 @@ color4:#6d6d6d,
         width: 320px;
       }
       .justify-content-end{
-        justify-content: center;
+        justify-content: center !important;
       }
     }
     @media only screen and (min-width:421px) and (max-width:600px) {
