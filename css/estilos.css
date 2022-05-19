@@ -263,16 +263,6 @@ textarea {
   text-align: center;
 }
 
-input:focus {
-  font-size: 60px;
-  border: 2px dotted #ff0000;
-  color: green;
-}
-
-input {
-  transition: all 2s;
-}
-
 /* 320px — 480px: Mobile devices
 481px — 768px: iPads, Tablets
 769px — 1024px: Small screens, laptops
