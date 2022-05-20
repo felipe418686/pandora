@@ -51,13 +51,13 @@
 				</nav>
             </header>
         </center>
-        <form action="" netlify>
+        <form action="enviar.php" method="post" netlify>
             <h2 class="center">CONTACTO</h2>
-            <input type="text" name="Nombre" placeholder="Nombre">
-            <input type="email" id="email" name="correo" placeholder="Correo">
-            <input type="number" name="telefeno" placeholder="Telefono">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="email" id="email" name="correo" placeholder="Correo" required>
+            <input type="number" name="telefono" placeholder="Telefono" required>
             <textarea name="mensaje" id="" cols="30" rows="10" placeholder="escriba aqui su mensaje"></textarea>
-            <input type="button" value="Enviar" id="boton">
+            <input type="submit" value="Enviar" id="boton">
         </form>
     </div>    
     <div class="b-example-divider"></div>
